@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: AsyncAPI
+metadata:
+  name: transaction-events
+  description: Event-driven API for transaction events
+  tags:
+    - events
+    - kafka
+    - transactions
+    - coinhub
+spec:
+  type: kafka
+  lifecycle: production
+  owner: platform
+  system: coinhub

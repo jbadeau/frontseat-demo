@@ -1,0 +1,196 @@
+openapi: 3.0.0
+info:
+  title: CoinHub Transaction API
+  version: 1.0.0
+  description: Transaction processing API for CoinHub
+  contact:
+    name: Platform Team
+servers:
+  - url: http://localhost:8082
+    description: Development server
+paths:
+  /transactions:
+    get:
+      summary: List transactions
+      operationId: listTransactions
+      tags:
+        - Transactions
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: accountId
+          in: query
+          schema:
+            type: string
+          description: Filter by account ID
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 50
+          description: Maximum number of transactions to return
+      responses:
+        '200':
+          description: List of transactions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create new transaction
+      operationId: createTransaction
+      tags:
+        - Transactions
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - accountId
+                - amount
+                - type
+              properties:
+                accountId:
+                  type: string
+                amount:
+                  type: number
+                  format: double
+                type:
+                  type: string
+                  enum: [deposit, withdrawal]
+                description:
+                  type: string
+      responses:
+        '201':
+          description: Transaction created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /transactions/{id}:
+    get:
+      summary: Get transaction details
+      operationId: getTransaction
+      tags:
+        - Transactions
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Transaction ID
+      responses:
+        '200':
+          description: Transaction details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+        '404':
+          description: Transaction not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /transfer:
+    post:
+      summary: Transfer funds between accounts
+      operationId: transfer
+      tags:
+        - Transactions
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - fromAccountId
+                - toAccountId
+                - amount
+              properties:
+                fromAccountId:
+                  type: string
+                toAccountId:
+                  type: string
+                amount:
+                  type: number
+                  format: double
+                  minimum: 0.01
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Transfer successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transactionId:
+                    type: string
+                  status:
+                    type: string
+                    enum: [completed, pending, failed]
+        '400':
+          description: Invalid transfer request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Transaction:
+      type: object
+      properties:
+        id:
+          type: string
+        accountId:
+          type: string
+        amount:
+          type: number
+          format: double
+        type:
+          type: string
+          enum: [deposit, withdrawal, transfer]
+        description:
+          type: string
+        status:
+          type: string
+          enum: [completed, pending, failed]
+        createdAt:
+          type: string
+          format: date-time
+    Error:
+      type: object
+      properties:
+        error:
+          type: string

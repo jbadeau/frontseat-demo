@@ -16,3 +16,7 @@ spec:
   lifecycle: production
   owner: platform
   system: coinhub
+  providesApis:
+    - account-api
+  consumesApis:
+    - auth-api

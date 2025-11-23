@@ -1,0 +1,130 @@
+asyncapi: 3.0.0
+info:
+  title: CoinHub Account Events
+  version: 1.0.0
+  description: Event-driven API for CoinHub account lifecycle events
+  contact:
+    name: Platform Team
+servers:
+  production:
+    host: kafka.coinhub.internal:9092
+    protocol: kafka
+    description: Production Kafka cluster
+channels:
+  accountCreated:
+    address: coinhub.accounts.created
+    messages:
+      AccountCreated:
+        $ref: '#/components/messages/AccountCreated'
+    description: Published when a new account is created
+  accountUpdated:
+    address: coinhub.accounts.updated
+    messages:
+      AccountUpdated:
+        $ref: '#/components/messages/AccountUpdated'
+    description: Published when an account is updated
+  accountClosed:
+    address: coinhub.accounts.closed
+    messages:
+      AccountClosed:
+        $ref: '#/components/messages/AccountClosed'
+    description: Published when an account is closed
+operations:
+  onAccountCreated:
+    action: receive
+    channel:
+      $ref: '#/channels/accountCreated'
+    summary: Subscribe to account creation events
+  onAccountUpdated:
+    action: receive
+    channel:
+      $ref: '#/channels/accountUpdated'
+    summary: Subscribe to account update events
+  onAccountClosed:
+    action: receive
+    channel:
+      $ref: '#/channels/accountClosed'
+    summary: Subscribe to account closure events
+components:
+  messages:
+    AccountCreated:
+      name: AccountCreated
+      title: Account Created Event
+      summary: Fired when a new account is successfully created
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/AccountCreatedPayload'
+    AccountUpdated:
+      name: AccountUpdated
+      title: Account Updated Event
+      summary: Fired when an account is updated
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/AccountUpdatedPayload'
+    AccountClosed:
+      name: AccountClosed
+      title: Account Closed Event
+      summary: Fired when an account is closed
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/AccountClosedPayload'
+  schemas:
+    AccountCreatedPayload:
+      type: object
+      required:
+        - accountId
+        - userId
+        - accountType
+        - currency
+        - timestamp
+      properties:
+        accountId:
+          type: string
+          description: Unique account identifier
+        userId:
+          type: string
+          description: User who owns the account
+        accountType:
+          type: string
+          enum: [checking, savings, investment]
+        currency:
+          type: string
+          enum: [USD, EUR, GBP, BTC, ETH]
+        initialBalance:
+          type: number
+          format: double
+          default: 0.0
+        timestamp:
+          type: string
+          format: date-time
+    AccountUpdatedPayload:
+      type: object
+      required:
+        - accountId
+        - timestamp
+      properties:
+        accountId:
+          type: string
+        nickname:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+    AccountClosedPayload:
+      type: object
+      required:
+        - accountId
+        - reason
+        - timestamp
+      properties:
+        accountId:
+          type: string
+        reason:
+          type: string
+          enum: [user_request, fraud, dormant]
+        finalBalance:
+          type: number
+          format: double
+        timestamp:
+          type: string
+          format: date-time

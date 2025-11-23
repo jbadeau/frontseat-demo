@@ -1,0 +1,9 @@
+extends: [[spectral:oas, all]]
+rules:
+  info-contact: warn
+  info-description: warn
+  operation-description: warn
+  operation-operationId-unique: error
+  operation-operationId: error
+  operation-tags: warn
+  path-params: error

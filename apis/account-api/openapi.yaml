@@ -1,0 +1,193 @@
+openapi: 3.0.0
+info:
+  title: CoinHub Account API
+  version: 1.0.0
+  description: Account management API for CoinHub
+  contact:
+    name: Platform Team
+servers:
+  - url: http://localhost:8083
+    description: Development server
+paths:
+  /accounts:
+    get:
+      summary: List user accounts
+      operationId: listAccounts
+      tags:
+        - Accounts
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of accounts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Account'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create new account
+      operationId: createAccount
+      tags:
+        - Accounts
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - accountType
+                - currency
+              properties:
+                accountType:
+                  type: string
+                  enum: [checking, savings, investment]
+                currency:
+                  type: string
+                  enum: [USD, EUR, GBP, BTC, ETH]
+      responses:
+        '201':
+          description: Account created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /accounts/{id}:
+    get:
+      summary: Get account details
+      operationId: getAccount
+      tags:
+        - Accounts
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Account ID
+      responses:
+        '200':
+          description: Account details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '404':
+          description: Account not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update account
+      operationId: updateAccount
+      tags:
+        - Accounts
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Account ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nickname:
+                  type: string
+      responses:
+        '200':
+          description: Account updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+  /accounts/{id}/balance:
+    get:
+      summary: Get account balance
+      operationId: getAccountBalance
+      tags:
+        - Accounts
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Account ID
+      responses:
+        '200':
+          description: Account balance
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accountId:
+                    type: string
+                  balance:
+                    type: number
+                    format: double
+                  currency:
+                    type: string
+                  lastUpdated:
+                    type: string
+                    format: date-time
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Account:
+      type: object
+      properties:
+        id:
+          type: string
+        userId:
+          type: string
+        accountType:
+          type: string
+          enum: [checking, savings, investment]
+        currency:
+          type: string
+        balance:
+          type: number
+          format: double
+        nickname:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
