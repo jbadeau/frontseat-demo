@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: transaction-service
+  description: CoinHub transaction processing service
+  annotations:
+    frontseat.io/type: "go"
+  tags:
+    - go
+    - transactions
+    - microservice
+    - coinhub
+spec:
+  type: service
+  lifecycle: production
+  owner: platform
+  system: coinhub

@@ -1,0 +1,21 @@
+# Build outputs
+bin/
+target/
+*.class
+
+# Dependencies
+node_modules/
+deno.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

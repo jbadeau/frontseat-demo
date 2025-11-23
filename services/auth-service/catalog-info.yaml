@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth-service
+  description: CoinHub authentication and authorization service
+  annotations:
+    frontseat.io/type: "go"
+  tags:
+    - go
+    - auth
+    - microservice
+    - coinhub
+spec:
+  type: service
+  lifecycle: production
+  owner: platform
+  system: coinhub
