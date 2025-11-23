@@ -228,7 +228,7 @@ const html = `
 </html>
 `;
 
-async function handler(req: Request): Promise<Response> {
+function handler(req: Request): Response {
   const url = new URL(req.url);
 
   // Health check endpoint
