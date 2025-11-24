@@ -3,6 +3,8 @@ kind: AsyncAPI
 metadata:
   name: account-events
   description: Event-driven API for account lifecycle events
+  annotations:
+    frontseat.io/type: "asyncapi"
   tags:
     - events
     - kafka

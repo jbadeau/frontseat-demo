@@ -3,6 +3,8 @@ kind: AsyncAPI
 metadata:
   name: transaction-events
   description: Event-driven API for transaction events
+  annotations:
+    frontseat.io/type: "asyncapi"
   tags:
     - events
     - kafka

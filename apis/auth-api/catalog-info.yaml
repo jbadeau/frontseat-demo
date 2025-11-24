@@ -3,6 +3,8 @@ kind: API
 metadata:
   name: auth-api
   description: Authentication and authorization API
+  annotations:
+    frontseat.io/type: "openapi"
   tags:
     - auth
     - jwt
