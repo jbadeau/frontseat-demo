@@ -1,7 +1,9 @@
 [tools]
 deno = "2.5.4"
+dotnet = "10.0.100"
 go = "1.25.3"
 java = "zulu-25.30.17"
 maven = "3.9.11"
 node = "20.10.0"
 python = "3.12"
+rust = "1.91.1"

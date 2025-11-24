@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: notification-service
+  description: CoinHub notification service for sending alerts and messages
+  annotations:
+    frontseat.io/type: "rust"
+  tags:
+    - rust
+    - microservice
+    - notifications
+    - coinhub
+spec:
+  type: service
+  lifecycle: production
+  owner: platform
+  system: coinhub
