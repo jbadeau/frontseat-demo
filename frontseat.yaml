@@ -10,5 +10,4 @@ spec:
     otel:
       options:
         endpoint: "localhost:4317"
-        serviceName: "frontseat-demo"
         insecure: "true"
