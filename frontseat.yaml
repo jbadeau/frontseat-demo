@@ -1,5 +1,14 @@
-# CoinHub Banking Platform - Frontseat Workspace
-
-name: coinhub
-version: 1.0.0
-description: Digital banking platform demo showcasing Frontseat's polyglot build capabilities
+apiVersion: frontseat.io/v1
+kind: Workspace
+metadata:
+  name: coinhub
+spec:
+  execution:
+    address: localhost:8980
+    instanceName: remote-execution
+  plugins:
+    otel:
+      options:
+        endpoint: "localhost:4317"
+        serviceName: "frontseat-demo"
+        insecure: "true"
