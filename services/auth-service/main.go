@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/coinhub/go-lib/response"
+	"github.com/coinhub/go-lib/stringutil"
 	"github.com/golang-jwt/jwt/v5"
 )
 
@@ -61,8 +63,10 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Simple authentication (in production, check against database)
-	if req.Username == "" || req.Password == "" {
-		http.Error(w, "Invalid credentials", http.StatusUnauthorized)
+	if stringutil.IsBlank(req.Username) || stringutil.IsBlank(req.Password) {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusUnauthorized)
+		json.NewEncoder(w).Encode(response.Error[any]("Invalid credentials"))
 		return
 	}
 

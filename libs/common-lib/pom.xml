@@ -12,20 +12,16 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>account-service</artifactId>
+    <artifactId>common-lib</artifactId>
     <packaging>jar</packaging>
 
-    <name>account-service</name>
-    <description>CoinHub Account Management Service</description>
+    <name>common-lib</name>
+    <description>CoinHub Common Library - Shared utilities and models</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.coinhub</groupId>
-            <artifactId>common-lib</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -33,13 +29,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>

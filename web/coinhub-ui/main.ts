@@ -1,3 +1,5 @@
+import { ApiResponse, isBlank } from "@coinhub/common";
+
 const PORT = 8080;
 
 const html = `
@@ -228,26 +230,41 @@ const html = `
 </html>
 `;
 
+interface HealthData {
+  status: string;
+  service: string;
+  version: string;
+}
+
 function handler(req: Request): Response {
   const url = new URL(req.url);
 
   // Health check endpoint
   if (url.pathname === "/health") {
-    return new Response(
-      JSON.stringify({
-        status: "healthy",
-        service: "coinhub-ui",
-        version: "1.0.0",
-      }),
-      {
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    const healthData: HealthData = {
+      status: "healthy",
+      service: "coinhub-ui",
+      version: "1.0.0",
+    };
+    const response = ApiResponse.success(healthData);
+    return new Response(JSON.stringify(response.toJSON()), {
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
-  // Serve the main page
-  return new Response(html, {
-    headers: { "Content-Type": "text/html" },
+  // Validate path is not blank
+  if (isBlank(url.pathname) || url.pathname === "/") {
+    // Serve the main page
+    return new Response(html, {
+      headers: { "Content-Type": "text/html" },
+    });
+  }
+
+  // 404 for other paths
+  const errorResponse = ApiResponse.error<null>("Not found");
+  return new Response(JSON.stringify(errorResponse.toJSON()), {
+    status: 404,
+    headers: { "Content-Type": "application/json" },
   });
 }
 

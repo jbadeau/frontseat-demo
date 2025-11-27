@@ -7,6 +7,9 @@ import (
 	"net/http"
 	"sync"
 	"time"
+
+	"github.com/coinhub/go-lib/response"
+	"github.com/coinhub/go-lib/stringutil"
 )
 
 type Transaction struct {
@@ -85,8 +88,10 @@ func transferHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Validate request
-	if req.FromAccount == "" || req.ToAccount == "" || req.Amount <= 0 {
-		http.Error(w, "Invalid transfer request", http.StatusBadRequest)
+	if stringutil.IsBlank(req.FromAccount) || stringutil.IsBlank(req.ToAccount) || req.Amount <= 0 {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+		json.NewEncoder(w).Encode(response.Error[any]("Invalid transfer request"))
 		return
 	}
 
