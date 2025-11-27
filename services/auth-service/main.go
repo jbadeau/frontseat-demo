@@ -125,3 +125,4 @@ func validateHandler(w http.ResponseWriter, r *http.Request) {
 		"userId":   claims.UserID,
 	})
 }
+
