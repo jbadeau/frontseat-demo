@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rust-lib
+  description: CoinHub Rust Library - Shared utilities and models for Rust services
+  annotations:
+    frontseat.io/type: "rust"
+  tags:
+    - rust
+    - library
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: coinhub

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: common-lib
+  description: CoinHub Common Library - Shared utilities and models for Java services
+  annotations:
+    frontseat.io/type: "maven"
+  tags:
+    - java
+    - maven
+    - library
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: coinhub

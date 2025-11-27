@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: deno-lib
+  description: CoinHub Deno Library - Shared utilities and models for Deno/TypeScript applications
+  annotations:
+    frontseat.io/type: "deno"
+  tags:
+    - deno
+    - typescript
+    - library
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: coinhub
