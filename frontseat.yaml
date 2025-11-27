@@ -7,6 +7,15 @@ spec:
     address: localhost:8980
     instanceName: remote-execution
   plugins:
+    mise: {}
+    backstage: {}
+    maven: {}
+    go: {}
+    rust: {}
+    openapi: {}
+    asyncapi: {}
+    jib: {}
+    helm: {}
     otel:
       options:
         endpoint: "localhost:4317"

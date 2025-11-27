@@ -1,0 +1,21 @@
+apiVersion: jib/v1alpha1
+kind: BuildFile
+
+from:
+  image: gcr.io/distroless/base-debian12
+
+entrypoint:
+  - /app/notification-service
+
+labels:
+  org.opencontainers.image.title: notification-service
+  org.opencontainers.image.description: CoinHub Notification Service
+
+layers:
+  entries:
+    - name: app
+      files:
+        - src: target/release/notification-service
+          dest: /app/notification-service
+      properties:
+        filePermissions: "755"
