@@ -21,3 +21,5 @@ Thumbs.db
 *.log
 
 *.tar
+services/auth-service/auth-service
+services/transaction-service/transaction-service
