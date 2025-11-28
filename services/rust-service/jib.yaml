@@ -1,0 +1,21 @@
+apiVersion: jib/v1alpha1
+kind: BuildFile
+
+from:
+  image: gcr.io/distroless/base-debian12
+
+entrypoint:
+  - /app/rust-service
+
+labels:
+  org.opencontainers.image.title: rust-service
+  org.opencontainers.image.description: CoinHub Rust Service
+
+layers:
+  entries:
+    - name: app
+      files:
+        - src: target/release/rust-service
+          dest: /app/rust-service
+      properties:
+        filePermissions: "755"

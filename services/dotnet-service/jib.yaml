@@ -1,0 +1,21 @@
+apiVersion: jib/v1alpha1
+kind: BuildFile
+
+from:
+  image: gcr.io/distroless/base-debian12
+
+entrypoint:
+  - /app/dotnet-service
+
+labels:
+  org.opencontainers.image.title: dotnet-service
+  org.opencontainers.image.description: CoinHub .NET Service
+
+layers:
+  entries:
+    - name: app
+      files:
+        - src: publish/dotnet-service
+          dest: /app/dotnet-service
+      properties:
+        filePermissions: "755"

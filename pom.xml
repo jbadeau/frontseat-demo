@@ -14,8 +14,8 @@
     <description>CoinHub Multi-Module Project Aggregator</description>
 
     <modules>
-        <module>libs/common-lib</module>
-        <module>services/account-service</module>
+        <module>libs/maven-lib</module>
+        <module>services/maven-service</module>
     </modules>
 
     <properties>
@@ -37,7 +37,7 @@
             </dependency>
             <dependency>
                 <groupId>com.coinhub</groupId>
-                <artifactId>common-lib</artifactId>
+                <artifactId>maven-lib</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

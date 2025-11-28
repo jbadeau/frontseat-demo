@@ -1,0 +1,21 @@
+apiVersion: jib/v1alpha1
+kind: BuildFile
+
+from:
+  image: gcr.io/distroless/java17-debian12
+
+entrypoint:
+  - java
+  - -jar
+  - /app/maven-service.jar
+
+labels:
+  org.opencontainers.image.title: maven-service
+  org.opencontainers.image.description: CoinHub Maven Service
+
+layers:
+  entries:
+    - name: app
+      files:
+        - src: target/maven-service-1.0.0.jar
+          dest: /app/maven-service.jar

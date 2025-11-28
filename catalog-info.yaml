@@ -1,3 +1,45 @@
+apiVersion: frontseat.io/v1
+kind: Workspace
+metadata:
+  name: coinhub
+spec:
+  execution:
+    address: localhost:8980
+    instanceName: remote-execution
+  plugins:
+    mise: {}
+    backstage: {}
+    maven: {}
+    go: {}
+    rust: {}
+    openapi: {}
+    asyncapi: {}
+    jib: {}
+    helm: {}
+    otel:
+      options:
+        endpoint: "localhost:4317"
+        insecure: "true"
+    dotnet: {}
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: coinhub-parent
+  description: CoinHub Maven Parent POM - Multi-module project aggregator
+  annotations:
+    frontseat.io/type: "maven"
+  tags:
+    - java
+    - maven
+    - parent-pom
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: coinhub
+---
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:

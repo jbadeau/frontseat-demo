@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dotnet-lib
+  description: CoinHub .NET Library - Shared utilities and models for .NET services
+  annotations:
+    frontseat.io/type: "dotnet"
+  tags:
+    - dotnet
+    - library
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: coinhub

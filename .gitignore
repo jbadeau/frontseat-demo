@@ -1,5 +1,6 @@
 # Build outputs
 bin/
+obj/
 target/
 *.class
 
@@ -21,5 +22,7 @@ Thumbs.db
 *.log
 
 *.tar
-services/auth-service/auth-service
-services/transaction-service/transaction-service
+
+# Go binaries (built in service root directories)
+services/go-service/bin/
+services/**/bin/*-service
