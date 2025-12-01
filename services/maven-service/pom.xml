@@ -7,16 +7,13 @@
 
     <parent>
         <groupId>com.coinhub</groupId>
-        <artifactId>coinhub-parent</artifactId>
-        <version>1.0.0</version>
+        <artifactId>maven-parent</artifactId>
+        <version>${revision}</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>maven-service</artifactId>
     <packaging>jar</packaging>
-
-    <name>maven-service</name>
-    <description>CoinHub Maven Service</description>
 
     <dependencies>
         <dependency>

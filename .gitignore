@@ -24,6 +24,8 @@ Thumbs.db
 
 *.tar
 
+.flattened-pom.xml
+
 # Go binaries (built in service root directories)
 services/go-service/bin/
 services/**/bin/*-service

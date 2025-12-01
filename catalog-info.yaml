@@ -3,11 +3,13 @@ kind: Workspace
 metadata:
   name: coinhub
 spec:
-  execution:
-    address: localhost:8980
-    instanceName: remote-execution
+  runner:
+    type: reapi
+    options:
+      address: "localhost:50051"
+      instanceName: ""
+      logstreamAddress: "localhost:50052"
   plugins:
-    mise: {}
     backstage: {}
     maven: {}
     go: {}
