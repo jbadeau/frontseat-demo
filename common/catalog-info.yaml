@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: common
+  description: Shared libraries and utilities
+  tags:
+    - shared
+    - libraries
+    - coinhub
+spec:
+  owner: platform
+  domain: coinhub
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: common-libs
+  description: Shared libraries across systems
+spec:
+  targets:
+    - ./core/catalog-info.yaml
+    - ./logging/catalog-info.yaml

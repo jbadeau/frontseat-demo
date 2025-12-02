@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: account-lib
+  description: CoinHub Account Library - Shared utilities for account services
+  annotations:
+    frontseat.io/type: "dotnet"
+  tags:
+    - dotnet
+    - library
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: account

@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: portal-web
+  description: CoinHub portal web interface
+  annotations:
+    frontseat.io/type: "deno"
+  tags:
+    - deno
+    - typescript
+    - frontend
+    - coinhub
+spec:
+  type: website
+  lifecycle: production
+  owner: platform
+  system: portal
+  dependsOn:
+    - component:logging
+  consumesApis:
+    - auth-api
+    - account-api
+    - transaction-api

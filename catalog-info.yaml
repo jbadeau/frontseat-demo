@@ -40,7 +40,18 @@ spec:
   type: library
   lifecycle: production
   owner: platform
-  system: coinhub
+  system: common
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: coinhub
+  description: CoinHub banking platform domain
+  tags:
+    - banking
+    - fintech
+spec:
+  owner: platform
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Location
@@ -49,17 +60,9 @@ metadata:
   description: Root catalog location for the frontseat-demo repository
 spec:
   targets:
-    - ./apis/account-api/catalog-info.yaml
-    - ./apis/auth-api/catalog-info.yaml
-    - ./apis/transaction-api/catalog-info.yaml
-    - ./events/account-events/catalog-info.yaml
-    - ./events/transaction-events/catalog-info.yaml
-    - ./libs/common-lib/catalog-info.yaml
-    - ./libs/deno-lib/catalog-info.yaml
-    - ./libs/go-lib/catalog-info.yaml
-    - ./libs/rust-lib/catalog-info.yaml
-    - ./services/account-service/catalog-info.yaml
-    - ./services/auth-service/catalog-info.yaml
-    - ./services/notification-service/catalog-info.yaml
-    - ./services/transaction-service/catalog-info.yaml
-    - ./web/coinhub-ui/catalog-info.yaml
+    - ./auth/catalog-info.yaml
+    - ./account/catalog-info.yaml
+    - ./transaction/catalog-info.yaml
+    - ./notification/catalog-info.yaml
+    - ./common/catalog-info.yaml
+    - ./portal/catalog-info.yaml

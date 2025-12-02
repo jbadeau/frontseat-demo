@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: account-service
+  description: CoinHub Account microservice
+  annotations:
+    frontseat.io/type: "dotnet"
+  tags:
+    - dotnet
+    - microservice
+    - coinhub
+spec:
+  type: service
+  lifecycle: production
+  owner: platform
+  system: account
+  dependsOn:
+    - component:account-lib
+  providesApis:
+    - account-api
+    - account-events

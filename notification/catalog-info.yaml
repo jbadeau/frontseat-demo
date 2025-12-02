@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: notification
+  description: Notification system
+  tags:
+    - notifications
+    - messaging
+    - coinhub
+spec:
+  owner: platform
+  domain: coinhub
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: notification-system
+  description: Notification system components
+spec:
+  targets:
+    - ./service/catalog-info.yaml

@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth-lib
+  description: CoinHub Auth Library - Shared utilities for auth services
+  annotations:
+    frontseat.io/type: "go"
+  tags:
+    - go
+    - library
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: auth

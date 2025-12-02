@@ -11,8 +11,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>libs/maven-lib</module>
-        <module>services/maven-service</module>
+        <module>common/core</module>
+        <module>notification/service</module>
     </modules>
 
     <properties>

@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: core
+  description: CoinHub Core Library - Shared utilities and models
+  annotations:
+    frontseat.io/type: "maven"
+  tags:
+    - core
+    - utilities
+    - library
+    - coinhub
+spec:
+  type: library
+  lifecycle: production
+  owner: platform
+  system: common
