@@ -4,13 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>dev.frontseat</groupId>
-    <artifactId>root</artifactId>
+    <artifactId>common-maven</artifactId>
     <version>0.0.0</version>
     <packaging>pom</packaging>
+
     <modules>
-        <module>common-maven</module>
-        <module>maven</module>
+        <module>common-maven-parent</module>
     </modules>
+
 </project>
+
 

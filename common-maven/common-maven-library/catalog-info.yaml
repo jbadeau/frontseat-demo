@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: common-maven-library
+  Title: Common Maven Library
+  description: Common maven library
+  tags:
+    - demo
+spec:
+  type: library
+  lifecycle: production
+  owner: demo
+  system: common-maven

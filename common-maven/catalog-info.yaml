@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: common-maven
+  Title: Common Maven
+  description: Common maven
+  tags:
+    - demo
+spec:
+  owner: demo
+  domain: demo

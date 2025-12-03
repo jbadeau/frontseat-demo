@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: maven
+  Title: Maven
+  description: Maven
+  tags:
+    - demo
+spec:
+  owner: demo
+  domain: demo

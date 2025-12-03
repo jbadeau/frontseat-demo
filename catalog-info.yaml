@@ -1,7 +1,9 @@
 apiVersion: frontseat.io/v1
 kind: Workspace
 metadata:
-  name: coinhub
+  name: demo
+  title: Demo
+  desciption: Demo
 spec:
   runner:
     type: reapi
@@ -12,57 +14,25 @@ spec:
   plugins:
     backstage: {}
     maven: {}
-    go: {}
-    rust: {}
-    openapi: {}
-    asyncapi: {}
-    jib: {}
-    helm: {}
-    otel:
-      options:
-        endpoint: "localhost:4317"
-        insecure: "true"
-    dotnet: {}
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: coinhub-parent
-  description: CoinHub Maven Parent POM - Multi-module project aggregator
-  annotations:
-    frontseat.io/type: "maven"
-  tags:
-    - java
-    - maven
-    - parent-pom
-    - coinhub
-spec:
-  type: library
-  lifecycle: production
-  owner: platform
-  system: common
+#    go: {}
+#    rust: {}
+#    openapi: {}
+#    asyncapi: {}
+#    jib: {}
+#    helm: {}
+#    otel:
+#      options:
+#        endpoint: "localhost:4317"
+#        insecure: "true"
+#    dotnet: {}
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Domain
 metadata:
-  name: coinhub
-  description: CoinHub banking platform domain
+  name: demo
+  title: Demo
+  description: Demo
   tags:
-    - banking
-    - fintech
+    - demo
 spec:
-  owner: platform
----
-apiVersion: backstage.io/v1alpha1
-kind: Location
-metadata:
-  name: frontseat-demo
-  description: Root catalog location for the frontseat-demo repository
-spec:
-  targets:
-    - ./auth/catalog-info.yaml
-    - ./account/catalog-info.yaml
-    - ./transaction/catalog-info.yaml
-    - ./notification/catalog-info.yaml
-    - ./common/catalog-info.yaml
-    - ./portal/catalog-info.yaml
+  owner: demo
