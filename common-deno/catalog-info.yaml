@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: common-deno
+  Title: Common Deno
+  description: Common Deno
+  tags:
+    - demo
+spec:
+  owner: demo
+  domain: demo

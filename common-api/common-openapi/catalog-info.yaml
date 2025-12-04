@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: common-openapi
+  title: Common OpenAPI
+  description: Common openapi
+  tags:
+    - demo
+spec:
+  type: openapi
+  lifecycle: production
+  owner: demo
+  system: common-api
+  definition:
+    $text: ./openapi.yaml

@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: common-asyncapi
+  title: Common AsyncAPI
+  description: Common asyncapi
+  tags:
+    - demo
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: demo
+  system: common-api
+  definition:
+    $text: ./asyncapi.yaml

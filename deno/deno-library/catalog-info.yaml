@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: deno-library
+  title: Deno Library
+  description: Deno library
+  tags:
+    - demo
+spec:
+  type: library
+  lifecycle: production
+  owner: demo
+  system: deno
+  dependsOn:
+    - component:common-deno-library

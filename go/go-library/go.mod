@@ -1,0 +1,7 @@
+module github.com/frontseat-demo/go-library
+
+go 1.21
+
+require github.com/frontseat-demo/common-go-library v0.0.0
+
+replace github.com/frontseat-demo/common-go-library => ../../common-go/common-go-library

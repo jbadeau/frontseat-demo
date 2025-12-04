@@ -1,15 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: maven-service
-  title: Maven Service
-  description: Maven service
+  name: go-service
+  title: Go Service
+  description: Go service
   tags:
     - demo
 spec:
   type: service
   lifecycle: production
   owner: demo
-  system: maven
+  system: go
+  dependsOn:
+    - component:go-library
   providesApis:
     - common-openapi

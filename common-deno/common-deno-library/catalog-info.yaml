@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: common-deno-library
+  title: Common Deno Library
+  description: Common Deno library
+  tags:
+    - demo
+spec:
+  type: library
+  lifecycle: production
+  owner: demo
+  system: common-deno

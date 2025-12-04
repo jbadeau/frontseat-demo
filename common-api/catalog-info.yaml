@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: common-api
+  title: Common API
+  description: Common api
+  tags:
+    - demo
+spec:
+  owner: demo
+  domain: demo
+

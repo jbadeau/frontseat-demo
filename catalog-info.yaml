@@ -14,10 +14,11 @@ spec:
   plugins:
     backstage: {}
     maven: {}
-#    go: {}
+    deno: {}
+    go: {}
+    openapi: {}
+    asyncapi: {}
 #    rust: {}
-#    openapi: {}
-#    asyncapi: {}
 #    jib: {}
 #    helm: {}
 #    otel:

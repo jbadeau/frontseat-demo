@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: deno-site
+  title: Deno Site
+  description: Deno site
+  tags:
+    - demo
+spec:
+  type: site
+  lifecycle: production
+  owner: demo
+  system: deno
+  dependsOn:
+    - component:deno-library
+  consumesApis:
+    - common-openapi

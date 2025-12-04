@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: deno
+  Title: Deno
+  description: Deno
+  tags:
+    - demo
+spec:
+  owner: demo
+  domain: demo
