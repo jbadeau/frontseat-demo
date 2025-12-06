@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: common-rust
+  title: Common Rust
+  description: Common Rust
+  tags:
+    - common
+spec:
+  owner: system
+  domain: common

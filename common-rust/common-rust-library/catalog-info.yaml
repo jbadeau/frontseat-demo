@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: common-rust-library
+  title: Common Rust Library
+  description: Common Rust library
+  tags:
+    - common
+spec:
+  type: library
+  lifecycle: production
+  owner: system
+  system: common-rust

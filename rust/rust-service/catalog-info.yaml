@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rust-service
+  title: Rust Service
+  description: Rust service
+  tags:
+    - app
+spec:
+  type: service
+  lifecycle: production
+  owner: product
+  system: rust
+  dependsOn:
+    - component:rust-library
+  providesApis:
+    - common-openapi

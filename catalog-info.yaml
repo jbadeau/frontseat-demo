@@ -18,7 +18,7 @@ spec:
     go: {}
     openapi: {}
     asyncapi: {}
-#    rust: {}
+    rust: {}
 #    jib: {}
 #    helm: {}
 #    otel:

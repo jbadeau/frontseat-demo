@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rust-library
+  title: Rust Library
+  description: Rust library
+  tags:
+    - app
+spec:
+  type: library
+  lifecycle: production
+  owner: product
+  system: rust
+  dependsOn:
+    - component:common-rust-library
