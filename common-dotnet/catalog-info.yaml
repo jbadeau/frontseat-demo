@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: common-dotnet
+  title: Common Dotnet
+  description: Common Dotnet
+  tags:
+    - common
+spec:
+  owner: system
+  domain: common

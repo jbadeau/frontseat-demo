@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dotnet-library
+  title: Dotnet Library
+  description: Dotnet library
+  tags:
+    - app
+spec:
+  type: library
+  lifecycle: production
+  owner: product
+  system: dotnet
+  dependsOn:
+    - component:common-dotnet-library
