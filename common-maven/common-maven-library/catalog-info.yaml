@@ -5,9 +5,9 @@ metadata:
   Title: Common Maven Library
   description: Common maven library
   tags:
-    - demo
+    - common
 spec:
   type: library
   lifecycle: production
-  owner: demo
+  owner: system
   system: common-maven

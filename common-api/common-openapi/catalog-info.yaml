@@ -5,11 +5,11 @@ metadata:
   title: Common OpenAPI
   description: Common openapi
   tags:
-    - demo
+    - common
 spec:
   type: openapi
   lifecycle: production
-  owner: demo
+  owner: system
   system: common-api
   definition:
     $text: ./openapi.yaml

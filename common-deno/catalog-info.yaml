@@ -5,7 +5,7 @@ metadata:
   Title: Common Deno
   description: Common Deno
   tags:
-    - demo
+    - common
 spec:
-  owner: demo
-  domain: demo
+  owner: system
+  domain: common

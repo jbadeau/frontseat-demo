@@ -5,7 +5,7 @@ metadata:
   Title: Maven
   description: Maven
   tags:
-    - demo
+    - app
 spec:
-  owner: demo
-  domain: demo
+  owner: product
+  domain: app

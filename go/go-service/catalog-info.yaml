@@ -5,11 +5,11 @@ metadata:
   title: Go Service
   description: Go service
   tags:
-    - demo
+    - app
 spec:
   type: service
   lifecycle: production
-  owner: demo
+  owner: product
   system: go
   dependsOn:
     - component:go-library

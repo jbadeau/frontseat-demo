@@ -5,11 +5,11 @@ metadata:
   title: Common AsyncAPI
   description: Common asyncapi
   tags:
-    - demo
+    - common
 spec:
   type: asyncapi
   lifecycle: production
-  owner: demo
+  owner: system
   system: common-api
   definition:
     $text: ./asyncapi.yaml

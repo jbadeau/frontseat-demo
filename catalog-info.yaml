@@ -30,10 +30,21 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Domain
 metadata:
-  name: demo
-  title: Demo
-  description: Demo
+  name: common
+  title: Common
+  description: Common
   tags:
-    - demo
+    - common
+spec:
+  owner: system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: app
+  title: App
+  description: App
+  tags:
+    - app
 spec:
   owner: demo

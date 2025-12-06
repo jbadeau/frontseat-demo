@@ -5,9 +5,9 @@ metadata:
   Title: Common Maven BOM
   description: Common maven bom
   tags:
-    - demo
+    - common
 spec:
   type: library
   lifecycle: production
-  owner: demo
+  owner: system
   system: common-maven

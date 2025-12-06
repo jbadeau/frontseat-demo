@@ -5,7 +5,7 @@ metadata:
   Title: Common Maven
   description: Common maven
   tags:
-    - demo
+    - common
 spec:
-  owner: demo
-  domain: demo
+  owner: system
+  domain: common

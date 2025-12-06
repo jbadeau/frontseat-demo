@@ -5,8 +5,8 @@ metadata:
   title: Common API
   description: Common api
   tags:
-    - demo
+    - common
 spec:
-  owner: demo
-  domain: demo
+  owner: system
+  domain: common
 

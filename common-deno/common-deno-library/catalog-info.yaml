@@ -5,9 +5,9 @@ metadata:
   title: Common Deno Library
   description: Common Deno library
   tags:
-    - demo
+    - common
 spec:
   type: library
   lifecycle: production
-  owner: demo
+  owner: system
   system: common-deno

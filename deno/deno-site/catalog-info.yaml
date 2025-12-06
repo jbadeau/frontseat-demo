@@ -5,11 +5,11 @@ metadata:
   title: Deno Site
   description: Deno site
   tags:
-    - demo
+    - app
 spec:
   type: site
   lifecycle: production
-  owner: demo
+  owner: product
   system: deno
   dependsOn:
     - component:deno-library

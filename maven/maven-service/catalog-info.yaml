@@ -5,11 +5,11 @@ metadata:
   title: Maven Service
   description: Maven service
   tags:
-    - demo
+    - app
 spec:
   type: service
   lifecycle: production
-  owner: demo
+  owner: product
   system: maven
   providesApis:
     - common-openapi

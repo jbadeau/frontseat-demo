@@ -5,9 +5,9 @@ metadata:
   Title: Maven Library
   description: Maven library
   tags:
-    - demo
+    - app
 spec:
   type: library
   lifecycle: production
-  owner: demo
+  owner: product
   system: maven

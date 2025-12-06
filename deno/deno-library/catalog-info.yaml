@@ -5,11 +5,11 @@ metadata:
   title: Deno Library
   description: Deno library
   tags:
-    - demo
+    - app
 spec:
   type: library
   lifecycle: production
-  owner: demo
+  owner: product
   system: deno
   dependsOn:
     - component:common-deno-library

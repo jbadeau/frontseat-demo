@@ -5,7 +5,7 @@ metadata:
   Title: Go
   description: Go
   tags:
-    - demo
+    - app
 spec:
-  owner: demo
-  domain: demo
+  owner: product
+  domain: app
