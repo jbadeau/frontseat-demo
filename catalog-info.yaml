@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: frontseat-demo
+  description: Frontseat demo project showcasing polyglot build system features
+spec:
+  type: service
+  lifecycle: production
+  owner: frontseat
