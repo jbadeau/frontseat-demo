@@ -1,6 +1,7 @@
 [tools]
 deno = "2.5.4"
 dotnet = "10.0.100"
+"frontseat:frontseat" = "latest"
 go = "1.25.3"
 helm = "3.13.1"
 java = "zulu-25.30.17"
