@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: maven-parent
+  description: Maven library
+  tags:
+    - maven
+    - java
+spec:
+  type: library
+  lifecycle: production
+  owner: demo

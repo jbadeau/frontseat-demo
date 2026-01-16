@@ -22,10 +22,8 @@ spec:
         enabled: true
       tagPattern: "v{version}"
   plugins:
-    frontseat/asyncapi: {}
-    frontseat/deno: {}
-    frontseat/dotnet: {}
-    frontseat/go: {}
+    frontseat/backstage: {}
+    frontseat/github: {}
     frontseat/maven: {}
-    frontseat/openapi: {}
-    frontseat/rust: {}
+    frontseat/release-conventional-commits: {}
+    frontseat/release-flow: {}
