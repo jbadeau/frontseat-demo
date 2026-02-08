@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions>
+    <extension>
+        <groupId>dev.frontseat</groupId>
+        <artifactId>frontseat-maven-cache-extension</artifactId>
+        <version>1.0.0</version>
+    </extension>
+</extensions>

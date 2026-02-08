@@ -30,3 +30,6 @@ Thumbs.db
 services/go-service/bin/
 services/**/bin/*-service
 mise.local.toml
+/.m2/
+dist/
+.frontseat/

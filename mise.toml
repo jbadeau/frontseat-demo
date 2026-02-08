@@ -1,3 +1,6 @@
+[plugins]
+frontseat = "mise plugin add frontseat https://github.com/jbadeau/frontseat-mise"
+
 [tools]
 # Managed by frontseat - tools from plugins are merged here
 deno = "2.5.4"
