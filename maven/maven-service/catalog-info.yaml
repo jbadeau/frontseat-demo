@@ -7,6 +7,9 @@ metadata:
     - maven
     - java
 spec:
-  type: library
+  type: service
   lifecycle: production
   owner: demo
+  dependsOn:
+    - component:default/maven-library
+    - component:default/maven-parent

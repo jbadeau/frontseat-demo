@@ -1,9 +1,5 @@
 [tools]
 # Managed by frontseat - tools from plugins are merged here
-# github-cli must be first (required by frontseat-mise plugin)
-github-cli = "latest"
-java = "latest"
-maven = "latest"
 deno = "2.5.4"
 dotnet = "10.0.100"
 "frontseat:frontseat" = "latest"
@@ -18,3 +14,6 @@ dotnet = "10.0.100"
 "frontseat:frontseat-plugin-release-flow" = "latest"
 "frontseat:frontseat-plugin-rust" = "latest"
 "frontseat:frontseat-plugin-vite" = "latest"
+github-cli = "latest"
+java = "latest"
+maven = "latest"

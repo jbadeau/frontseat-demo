@@ -23,7 +23,16 @@ spec:
       tagPattern: "v{version}"
   plugins:
     frontseat/backstage: {}
+    frontseat/deno: {}
+    frontseat/docker: {}
+    frontseat/dotnet: {}
     frontseat/github: {}
+    frontseat/go: {}
+    frontseat/helm: {}
+    frontseat/jib: {}
     frontseat/maven: {}
+    frontseat/npm: {}
     frontseat/release-conventional-commits: {}
     frontseat/release-flow: {}
+    frontseat/rust: {}
+    frontseat/vite: {}

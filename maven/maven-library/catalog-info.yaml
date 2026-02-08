@@ -10,3 +10,8 @@ spec:
   type: library
   lifecycle: production
   owner: demo
+  dependsOn:
+    - component:default/common-maven-library
+    - component:default/maven-parent
+  dependencyOf:
+    - component:default/maven-service
