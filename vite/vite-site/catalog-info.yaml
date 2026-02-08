@@ -10,3 +10,4 @@ spec:
   type: service
   lifecycle: production
   owner: demo
+  domain: frontseat-demo

@@ -9,6 +9,7 @@ spec:
   type: service
   lifecycle: production
   owner: demo
+  domain: frontseat-demo
   dependsOn:
     - component:default/common-go-library
     - component:default/go-library

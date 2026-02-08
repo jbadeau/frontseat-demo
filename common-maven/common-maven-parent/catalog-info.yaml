@@ -10,6 +10,7 @@ spec:
   type: library
   lifecycle: production
   owner: demo
+  domain: frontseat-demo
   dependencyOf:
     - component:default/common-maven-bom
     - component:default/common-maven-library

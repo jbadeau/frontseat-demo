@@ -9,5 +9,6 @@ spec:
   type: library
   lifecycle: production
   owner: demo
+  domain: frontseat-demo
   dependencyOf:
     - component:default/rust-library
