@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dotnet-service
+  description: .NET service
+  tags:
+    - dotnet
+    - csharp
+spec:
+  type: service
+  lifecycle: production
+  owner: demo
+  dependsOn:
+    - component:default/dotnet-library

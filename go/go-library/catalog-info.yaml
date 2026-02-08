@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: go-library
+  description: Go library
+  tags:
+    - go
+spec:
+  type: library
+  lifecycle: production
+  owner: demo
+  dependsOn:
+    - component:default/common-go-library
+  dependencyOf:
+    - component:default/go-service

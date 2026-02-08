@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "common-rust/common-rust-library",
+    "rust/rust-library",
+    "rust/rust-service",
+]
+resolver = "2"

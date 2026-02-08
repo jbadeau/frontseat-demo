@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: go-service
+  description: Go service
+  tags:
+    - go
+spec:
+  type: service
+  lifecycle: production
+  owner: demo
+  dependsOn:
+    - component:default/common-go-library
+    - component:default/go-library

@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: common-dotnet-library
+  description: Common .NET library
+  tags:
+    - dotnet
+    - csharp
+spec:
+  type: library
+  lifecycle: production
+  owner: demo
+  dependencyOf:
+    - component:default/dotnet-library

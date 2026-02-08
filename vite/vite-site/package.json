@@ -1,0 +1,16 @@
+{
+  "name": "@frontseat-demo/vite-site",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@frontseat-demo/vite-library": "file:../vite-library"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

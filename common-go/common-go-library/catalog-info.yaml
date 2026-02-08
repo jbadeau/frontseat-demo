@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: common-go-library
+  description: Common Go library
+  tags:
+    - go
+spec:
+  type: library
+  lifecycle: production
+  owner: demo
+  dependencyOf:
+    - component:default/go-library
+    - component:default/go-service
