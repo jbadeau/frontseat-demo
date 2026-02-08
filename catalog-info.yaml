@@ -1,12 +1,30 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Group
+metadata:
+  name: demo
+  description: Demo team
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
 metadata:
   name: frontseat-demo
-  description: Maven library
-  tags:
-    - maven
-    - java
+  description: Frontseat demo workspace
+  annotations:
+    frontseat.dev/container-registry: ghcr.io/jbadeau
 spec:
-  type: library
-  lifecycle: production
   owner: demo
+  platform:
+    targets:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+  branching:
+    strategy: release-flow
+  ship:
+    strategy: conventional-commits
+    versioning: fixed
+    tagPattern: "v{version}"
