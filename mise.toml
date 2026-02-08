@@ -4,7 +4,6 @@ frontseat = "mise plugin add frontseat https://github.com/jbadeau/frontseat-mise
 [tools]
 # Managed by frontseat - tools from plugins are merged here
 deno = "2.5.4"
-docker = "latest"
 dotnet = "10.0.100"
 "frontseat:frontseat" = "latest"
 "frontseat:frontseat-plugin-backstage" = "latest"
