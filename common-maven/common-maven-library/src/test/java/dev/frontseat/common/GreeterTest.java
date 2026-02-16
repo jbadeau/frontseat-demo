@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class GreeterTest {
+public class GreeterTest {
 
     @Test
     void greetReturnsExpectedMessage() {

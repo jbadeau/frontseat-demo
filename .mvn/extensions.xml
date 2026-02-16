@@ -2,7 +2,7 @@
 <extensions>
     <extension>
         <groupId>dev.frontseat</groupId>
-        <artifactId>frontseat-maven-cache-extension</artifactId>
+        <artifactId>frontseat-maven-build-cache-extension</artifactId>
         <version>1.0.0</version>
     </extension>
 </extensions>
