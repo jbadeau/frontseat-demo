@@ -1,1 +1,1 @@
-# CoinHub
+# frontseat-demo

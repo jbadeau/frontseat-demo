@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  packages: read
 
 jobs:
   ship:
@@ -35,12 +36,12 @@ jobs:
           ~/.local/bin/mise install
           echo "$HOME/.local/share/mise/shims" >> $GITHUB_PATH
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: build
         run: frontseat build --exec-mode local --cache-mode offline
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: ship
         if: github.event_name == 'pull_request' || ((github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')) && github.event.inputs.release == 'true')
@@ -49,4 +50,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           frontseat ship
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
