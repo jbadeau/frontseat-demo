@@ -13,6 +13,5 @@
         <module>common-maven</module>
         <module>maven</module>
     </modules>
-
 </project>
 
