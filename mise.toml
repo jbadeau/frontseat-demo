@@ -30,4 +30,3 @@ rust = "latest"
 
 [settings]
 experimental= true
-jobs = 3
