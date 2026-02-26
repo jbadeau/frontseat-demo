@@ -32,4 +32,5 @@ services/**/bin/*-service
 mise.local.toml
 /.m2/
 dist/
+
 .frontseat/
