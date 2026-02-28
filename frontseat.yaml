@@ -18,5 +18,5 @@ spec:
     frontseat/npm: {}
     frontseat/release-conventional-commits: {}
     frontseat/rust: {}
-    frontseat/release-flow: {}
     frontseat/vite: {}
+    frontseat/release-flow: {}
