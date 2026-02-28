@@ -1,3 +1,5 @@
+pub const VERSION: &str = "0.2.0";
+
 pub fn greet(name: &str) -> String {
     format!("Hello, {}!", name)
 }

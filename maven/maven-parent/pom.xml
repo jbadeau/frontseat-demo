@@ -9,6 +9,7 @@
     <artifactId>maven-parent</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
+    <description>Maven parent for frontseat-demo application modules</description>
 
     <modules>
         <module>../maven-library</module>

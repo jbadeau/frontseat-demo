@@ -9,6 +9,7 @@
     <artifactId>common-maven-parent</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
+    <description>Common Maven parent for frontseat-demo modules</description>
 
     <modules>
         <module>../common-maven-bom</module>

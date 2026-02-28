@@ -1,3 +1,5 @@
+pub const VERSION: &str = "0.2.0";
+
 pub fn fancy_greet(name: &str) -> String {
     format!("*** {} ***", common_rust_library::greet(name))
 }

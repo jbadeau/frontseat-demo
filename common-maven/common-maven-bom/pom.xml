@@ -14,6 +14,7 @@
 
     <artifactId>common-maven-bom</artifactId>
     <packaging>pom</packaging>
+    <description>Common Maven BOM for frontseat-demo dependency management</description>
 
     <dependencyManagement>
         <dependencies>
