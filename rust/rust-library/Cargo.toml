@@ -2,6 +2,7 @@
 name = "rust-library"
 version = "0.0.0"
 edition = "2021"
+rust-version = "1.85"
 
 [dependencies]
 common-rust-library = { path = "../../common-rust/common-rust-library" }

@@ -3,8 +3,8 @@ kind: Workspace
 metadata:
   name: frontseat-demo
 spec:
-  version: latest
   plugins:
+    frontseat/asyncapi: {}
     frontseat/backstage: {}
     frontseat/deno: {}
     frontseat/docker: {}
@@ -16,7 +16,9 @@ spec:
     frontseat/maven: {}
     frontseat/mise: {}
     frontseat/npm: {}
+    frontseat/openapi: {}
     frontseat/release-conventional-commits: {}
-    frontseat/rust: {}
     frontseat/release-flow: {}
+    frontseat/rust: {}
     frontseat/vite: {}
+  version: latest
