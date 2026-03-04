@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: maven-service
   description: Maven library
-  tags:
-    - maven
-    - java
+  labels:
+    frontseat.dev/language: java
 spec:
   type: service
   lifecycle: production

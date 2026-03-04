@@ -3,8 +3,8 @@ kind: Component
 metadata:
   name: go-service
   description: Go service
-  tags:
-    - go
+  labels:
+    frontseat.dev/language: go
 spec:
   type: service
   lifecycle: production

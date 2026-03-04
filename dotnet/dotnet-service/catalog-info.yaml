@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: dotnet-service
   description: .NET service
-  tags:
-    - dotnet
-    - csharp
+  labels:
+    frontseat.dev/language: csharp
 spec:
   type: service
   lifecycle: production

@@ -1,6 +1,9 @@
 {
   "name": "frontseat-demo",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "workspaces": [
     "common-vite/common-vite-library",
     "vite/vite-library",

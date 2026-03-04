@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: deno-site
   description: Deno site
-  tags:
-    - deno
-    - typescript
+  labels:
+    frontseat.dev/language: typescript
 spec:
   type: service
   lifecycle: production

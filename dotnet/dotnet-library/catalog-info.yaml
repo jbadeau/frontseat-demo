@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: dotnet-library
   description: .NET library
-  tags:
-    - dotnet
-    - csharp
+  labels:
+    frontseat.dev/language: csharp
 spec:
   type: library
   lifecycle: production

@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: vite-library
   description: Vite library
-  tags:
-    - vite
-    - typescript
+  labels:
+    frontseat.dev/language: typescript
 spec:
   type: library
   lifecycle: production

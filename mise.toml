@@ -1,32 +1,9 @@
+[plugins]
+frontseat = "https://github.com/frontseat-dev/frontseat-mise.git"
+
 [tools]
-# Managed by frontseat - tools from plugins are merged here
-deno = "2.5.4"
-dotnet = "10.0.100"
-"frontseat:frontseat" = "latest"
-"frontseat:frontseat-plugin-backstage" = "latest"
-"frontseat:frontseat-plugin-deno" = "latest"
-"frontseat:frontseat-plugin-docker" = "latest"
-"frontseat:frontseat-plugin-dotnet" = "latest"
-"frontseat:frontseat-plugin-github" = "latest"
-"frontseat:frontseat-plugin-go" = "latest"
-"frontseat:frontseat-plugin-helm" = "latest"
-"frontseat:frontseat-plugin-jib" = "latest"
-"frontseat:frontseat-plugin-maven" = "latest"
-"frontseat:frontseat-plugin-mise" = "latest"
-"frontseat:frontseat-plugin-npm" = "latest"
-"frontseat:frontseat-plugin-protobuf" = "latest"
-"frontseat:frontseat-plugin-release-conventional-commits" = "latest"
-"frontseat:frontseat-plugin-release-flow" = "latest"
-"frontseat:frontseat-plugin-rust" = "latest"
-"frontseat:frontseat-plugin-vite" = "latest"
-github-cli = "latest"
-go = "latest"
-helm = "latest"
-java = "latest"
-jib = "latest"
-maven = "latest"
-node = "latest"
-rust = "latest"
+# Managed by frontseat - frontseat CLI self-install
+"frontseat:frontseat" = { version = "latest", plugins = "backstage,deno,docker,dotnet,github,go,helm,jib,maven,mise,npm,release-conventional-commits,release-flow,rust,vite" }
 
 [settings]
 experimental= true

@@ -3,8 +3,8 @@ kind: Component
 metadata:
   name: go-library
   description: Go library
-  tags:
-    - go
+  labels:
+    frontseat.dev/language: go
 spec:
   type: library
   lifecycle: production

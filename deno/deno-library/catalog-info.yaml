@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: deno-library
   description: Deno library
-  tags:
-    - deno
-    - typescript
+  labels:
+    frontseat.dev/language: typescript
 spec:
   type: library
   lifecycle: production

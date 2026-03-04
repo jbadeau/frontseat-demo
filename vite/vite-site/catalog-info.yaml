@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: vite-site
   description: Vite site
-  tags:
-    - vite
-    - typescript
+  labels:
+    frontseat.dev/language: typescript
 spec:
   type: service
   lifecycle: production
