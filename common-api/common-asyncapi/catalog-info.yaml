@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: common-asyncapi
+  description: Common asyncapi API
+  labels:
+    frontseat.dev/language: asyncapi
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: demo
+  domain: frontseat-demo
+  definition: |
+    $text: ./asyncapi.yaml
