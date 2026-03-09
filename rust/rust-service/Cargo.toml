@@ -1,8 +1,0 @@
-[package]
-name = "rust-service"
-version = "0.0.0"
-edition = "2021"
-rust-version = "1.85"
-
-[dependencies]
-rust-library = { path = "../rust-library" }

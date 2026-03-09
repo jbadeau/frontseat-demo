@@ -1,7 +1,7 @@
 apiVersion: frontseat.io/v1alpha1
 kind: Workspace
 metadata:
-  name: frontseat-demo
+  name: gotham-financial
 spec:
   plugins:
     frontseat/asyncapi: {}
@@ -17,6 +17,7 @@ spec:
     frontseat/mise: {}
     frontseat/npm: {}
     frontseat/openapi: {}
+    frontseat/protobuf: {}
     frontseat/release-conventional-commits: {}
     frontseat/release-flow: {}
     frontseat/rust: {}

@@ -1,0 +1,7 @@
+{
+  "name": "@backoffice-library",
+  "imports": {
+    "std/": "https://deno.land/std@0.208.0/",
+    "@gotham-deno-commons/": "../../platform/gotham-deno-platform/gotham-deno-commons/"
+  }
+}

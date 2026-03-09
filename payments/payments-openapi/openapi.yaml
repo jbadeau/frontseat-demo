@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Payments API
+  description: Gotham Financial payment processing API
+  version: 1.0.0
+paths:
+  /payment:
+    get:
+      summary: Process a payment transaction
+      operationId: processPayment
+      parameters:
+        - name: amount
+          in: query
+          description: Transaction amount
+          required: false
+          schema:
+            type: number
+            format: double
+            default: 100.00
+        - name: from
+          in: query
+          description: Sender account name
+          required: false
+          schema:
+            type: string
+            default: Wayne
+        - name: to
+          in: query
+          description: Recipient account name
+          required: false
+          schema:
+            type: string
+            default: Gordon
+      responses:
+        "200":
+          description: Transaction processed successfully
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "*** Transaction GCB-A1B2C3D4: $100.00 from Wayne to Gordon — Approved ***"
+  /version:
+    get:
+      summary: Get service version
+      operationId: getVersion
+      responses:
+        "200":
+          description: Current service version
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "0.2.0"

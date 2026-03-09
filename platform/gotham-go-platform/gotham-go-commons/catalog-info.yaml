@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gotham-go-commons
+  description: Gotham Go commons library
+  labels:
+    frontseat.dev/language: go
+spec:
+  type: library
+  lifecycle: production
+  owner: wayne-enterprises
+  dependencyOf:
+    - component:default/partners-library
+    - component:default/partners-service

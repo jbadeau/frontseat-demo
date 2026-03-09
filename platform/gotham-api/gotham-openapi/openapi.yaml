@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: Gotham Financial Common Schemas
+  description: Shared error responses, pagination, and common types used across all Gotham Financial APIs
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          description: Machine-readable error code
+          example: "GF-ERR-001"
+        message:
+          type: string
+          description: Human-readable error description
+          example: "Insufficient funds in account GF-482910"
+        traceId:
+          type: string
+          description: Gotham Financial trace identifier for support
+          example: "bat-signal-7f3a9c"
+    PaginatedResponse:
+      type: object
+      properties:
+        page:
+          type: integer
+          example: 1
+        pageSize:
+          type: integer
+          example: 25
+        totalItems:
+          type: integer
+          example: 142
+        totalPages:
+          type: integer
+          example: 6
+    Money:
+      type: object
+      required:
+        - amount
+        - currency
+      properties:
+        amount:
+          type: number
+          format: double
+          example: 1000000.00
+        currency:
+          type: string
+          pattern: "^[A-Z]{3}$"
+          example: "USD"
+    AccountReference:
+      type: object
+      required:
+        - accountId
+      properties:
+        accountId:
+          type: string
+          pattern: "^GF-[0-9]{6}$"
+          example: "GF-482910"
+        accountHolder:
+          type: string
+          example: "Bruce Wayne"

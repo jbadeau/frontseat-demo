@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: mandates-protobuf
+  description: Mandates service Protobuf API definition
+  labels:
+    frontseat.dev/language: protobuf
+spec:
+  type: grpc
+  lifecycle: production
+  owner: birds-of-prey
+  domain: retail-banking
+  system: mandates-system
+  definition: |
+    $text: ./mandates.proto

@@ -1,0 +1,103 @@
+asyncapi: 2.6.0
+info:
+  title: Gotham Financial Market Data
+  description: Real-time market data feeds from the Gotham Stock Exchange — exchange rates, stock prices, interest rates, and market alerts
+  version: 1.0.0
+channels:
+  exchange-rates:
+    description: Real-time foreign exchange rate updates
+    subscribe:
+      summary: Receive FX rate updates (USD/GBP, EUR/GBP, etc.)
+      message:
+        payload:
+          type: object
+          properties:
+            pair:
+              type: string
+              example: "USD/GBP"
+            rate:
+              type: number
+              example: 0.7891
+            timestamp:
+              type: string
+              format: date-time
+  stock-prices:
+    description: Gotham Stock Exchange ticker feed
+    subscribe:
+      summary: Receive stock price updates
+      message:
+        payload:
+          type: object
+          properties:
+            symbol:
+              type: string
+              example: "WAYNE"
+            price:
+              type: number
+              example: 284.50
+            change:
+              type: number
+              example: 2.35
+            exchange:
+              type: string
+              example: "GSE"
+  interest-rates:
+    description: Central bank rate change notifications
+    subscribe:
+      summary: Receive interest rate updates from Gotham Central Bank
+      message:
+        payload:
+          type: object
+          properties:
+            rateType:
+              type: string
+              example: "base-rate"
+            rate:
+              type: number
+              example: 5.25
+            effectiveDate:
+              type: string
+              format: date
+  market-alerts:
+    description: Circuit breaker and volatility alerts
+    subscribe:
+      summary: Receive market alert notifications
+      message:
+        payload:
+          type: object
+          properties:
+            alertType:
+              type: string
+              enum:
+                - circuit-breaker
+                - volatility-warning
+                - trading-halt
+            severity:
+              type: string
+              enum:
+                - info
+                - warning
+                - critical
+            message:
+              type: string
+              example: "Trading halt on LEXCORP — pending investigation by Commissioner Gordon"
+  commodity-prices:
+    description: Precious metals and energy pricing
+    subscribe:
+      summary: Receive commodity price updates
+      message:
+        payload:
+          type: object
+          properties:
+            commodity:
+              type: string
+              example: "gold"
+            pricePerUnit:
+              type: number
+              example: 2045.30
+            unit:
+              type: string
+              example: "troy-oz"
+            currency:
+              type: string
+              example: "USD"

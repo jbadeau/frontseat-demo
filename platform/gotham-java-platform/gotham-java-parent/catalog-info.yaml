@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gotham-java-parent
+  description: Gotham Financial Java parent POM
+  labels:
+    frontseat.dev/language: java
+spec:
+  type: library
+  lifecycle: production
+  owner: wayne-enterprises
+  dependencyOf:
+    - component:default/gotham-java-bom
+    - component:default/gotham-java-commons

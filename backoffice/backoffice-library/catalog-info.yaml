@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backoffice-library
+  description: Backoffice library
+  labels:
+    frontseat.dev/language: typescript
+spec:
+  type: library
+  lifecycle: production
+  owner: suicide-squad
+  domain: capital-markets
+  system: backoffice-system
+  dependsOn:
+    - component:default/gotham-deno-commons
+  dependencyOf:
+    - component:default/backoffice-site

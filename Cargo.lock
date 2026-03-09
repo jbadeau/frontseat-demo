@@ -3,19 +3,19 @@
 version = 4
 
 [[package]]
-name = "common-rust-library"
+name = "gotham-rust-commons"
 version = "0.0.0"
 
 [[package]]
-name = "rust-library"
+name = "mandates-library"
 version = "0.0.0"
 dependencies = [
- "common-rust-library",
+ "gotham-rust-commons",
 ]
 
 [[package]]
-name = "rust-service"
+name = "mandates-service"
 version = "0.0.0"
 dependencies = [
- "rust-library",
+ "mandates-library",
 ]

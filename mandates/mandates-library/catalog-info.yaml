@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mandates-library
+  description: Mandates domain library
+  labels:
+    frontseat.dev/language: rust
+spec:
+  type: library
+  lifecycle: production
+  owner: birds-of-prey
+  domain: retail-banking
+  system: mandates-system
+  dependsOn:
+    - component:default/gotham-rust-commons
+  dependencyOf:
+    - component:default/mandates-service

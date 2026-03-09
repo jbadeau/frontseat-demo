@@ -1,12 +1,15 @@
 {
-  "name": "frontseat-demo",
+  "name": "gotham-financial",
   "private": true,
   "engines": {
     "node": ">=20"
   },
   "workspaces": [
-    "common-vite/common-vite-library",
-    "vite/vite-library",
-    "vite/vite-site"
-  ]
+    "platform/gotham-vite-platform/gotham-vite-commons",
+    "portal/portal-library",
+    "portal/portal-site"
+  ],
+  "dependencies": {
+    "@esbuild/darwin-arm64": "^0.21.5"
+  }
 }
