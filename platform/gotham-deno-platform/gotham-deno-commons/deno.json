@@ -1,0 +1,6 @@
+{
+  "name": "@gotham-deno-commons",
+  "imports": {
+    "std/": "https://deno.land/std@0.208.0/"
+  }
+}

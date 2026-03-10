@@ -1,0 +1,7 @@
+{
+  "name": "@backoffice-site",
+  "imports": {
+    "std/": "https://deno.land/std@0.208.0/",
+    "@backoffice-library/": "../backoffice-library/"
+  }
+}

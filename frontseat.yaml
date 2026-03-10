@@ -1,10 +1,10 @@
 apiVersion: frontseat.io/v1alpha1
 kind: Workspace
 metadata:
-  name: frontseat-demo
+  name: gotham-financial
 spec:
-  version: latest
   plugins:
+    frontseat/asyncapi: {}
     frontseat/backstage: {}
     frontseat/deno: {}
     frontseat/docker: {}
@@ -16,7 +16,10 @@ spec:
     frontseat/maven: {}
     frontseat/mise: {}
     frontseat/npm: {}
+    frontseat/openapi: {}
+    frontseat/protobuf: {}
     frontseat/release-conventional-commits: {}
-    frontseat/rust: {}
     frontseat/release-flow: {}
+    frontseat/rust: {}
     frontseat/vite: {}
+  version: latest

@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: accounts-service
+  description: Accounts .NET service
+  labels:
+    frontseat.dev/language: csharp
+spec:
+  type: service
+  lifecycle: production
+  owner: teen-titans
+  domain: retail-banking
+  system: accounts-system
+  dependsOn:
+    - component:default/accounts-library

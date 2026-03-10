@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package gotham.mandates.v1;
+
+option java_package = "com.gotham.mandates.v1";
+option java_multiple_files = true;
+
+// Mandate lifecycle management service for direct debit mandates.
+service MandateService {
+  // Creates a new direct debit mandate between a creditor and debtor.
+  rpc CreateMandate(CreateMandateRequest) returns (CreateMandateResponse);
+
+  // Retrieves an existing mandate by its identifier.
+  rpc GetMandate(GetMandateRequest) returns (GetMandateResponse);
+
+  // Cancels an active mandate.
+  rpc CancelMandate(CancelMandateRequest) returns (CancelMandateResponse);
+}
+
+enum MandateStatus {
+  MANDATE_STATUS_UNSPECIFIED = 0;
+  MANDATE_STATUS_ACTIVE = 1;
+  MANDATE_STATUS_CANCELLED = 2;
+  MANDATE_STATUS_EXPIRED = 3;
+}
+
+message Mandate {
+  string mandate_id = 1;
+  string creditor = 2;
+  string debtor = 3;
+  double amount = 4;
+  string currency = 5;
+  MandateStatus status = 6;
+  string created_at = 7;
+  string updated_at = 8;
+}
+
+// --- CreateMandate ---
+
+message CreateMandateRequest {
+  string creditor = 1;
+  string debtor = 2;
+  double amount = 3;
+  string currency = 4;
+}
+
+message CreateMandateResponse {
+  Mandate mandate = 1;
+}
+
+// --- GetMandate ---
+
+message GetMandateRequest {
+  string mandate_id = 1;
+}
+
+message GetMandateResponse {
+  Mandate mandate = 1;
+}
+
+// --- CancelMandate ---
+
+message CancelMandateRequest {
+  string mandate_id = 1;
+  string reason = 2;
+}
+
+message CancelMandateResponse {
+  Mandate mandate = 1;
+}

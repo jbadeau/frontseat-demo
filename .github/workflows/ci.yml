@@ -18,7 +18,7 @@ on:
 
 permissions:
   contents: write
-  packages: read
+  packages: write
 
 jobs:
   ship:
@@ -35,6 +35,13 @@ jobs:
           ~/.local/bin/mise plugin add frontseat https://github.com/frontseat-dev/frontseat-mise 2>/dev/null || true
           ~/.local/bin/mise install
           echo "$HOME/.local/share/mise/shims" >> $GITHUB_PATH
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: registry-login
+        run: |
+          echo "$GH_TOKEN" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          echo "$GH_TOKEN" | helm registry login ghcr.io -u ${{ github.actor }} --password-stdin
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 

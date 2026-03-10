@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: gotham-openapi
+  description: Gotham Financial shared schemas — errors, pagination, and common types
+  labels:
+    frontseat.dev/language: openapi
+spec:
+  type: openapi
+  lifecycle: production
+  owner: wayne-enterprises
+  definition: |
+    $text: ./openapi.yaml

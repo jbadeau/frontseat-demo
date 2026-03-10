@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gotham-java-commons
+  description: Gotham Financial Java commons library
+  labels:
+    frontseat.dev/language: java
+spec:
+  type: library
+  lifecycle: production
+  owner: wayne-enterprises
+  dependsOn:
+    - component:default/gotham-java-parent
+  dependencyOf:
+    - component:default/payments-library

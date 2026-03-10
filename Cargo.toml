@@ -1,7 +1,7 @@
 [workspace]
 members = [
-    "common-rust/common-rust-library",
-    "rust/rust-library",
-    "rust/rust-service",
+    "platform/gotham-rust-platform/gotham-rust-commons",
+    "mandates/mandates-library",
+    "mandates/mandates-service",
 ]
 resolver = "2"

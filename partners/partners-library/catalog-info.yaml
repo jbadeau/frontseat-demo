@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: partners-library
+  description: Partners library
+  labels:
+    frontseat.dev/language: go
+spec:
+  type: library
+  lifecycle: production
+  owner: justice-league
+  domain: capital-markets
+  system: partners-system
+  dependsOn:
+    - component:default/gotham-go-commons
+  dependencyOf:
+    - component:default/partners-service
