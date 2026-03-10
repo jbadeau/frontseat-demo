@@ -1,0 +1,33 @@
+# Local development - use local frontseat builds
+#
+# Usage:
+#   1. Build: mise run build
+#   2. Run: frontseat build
+#
+# This file is gitignored and automatically loaded by mise.
+
+[env]
+GH_TOKEN = ""
+GITHUB_TOKEN = ""
+GITHUB_ACTOR = ""
+
+[tasks.nuke]
+description = "Remove all generated files and directories"
+run = """
+find . -name '.m2' -type d -exec rm -rf {} +
+find . -name '.frontseat' -type d -exec rm -rf {} +
+find . -name 'ship' -type d -exec rm -rf {} +
+find . -name 'target' -type d -exec rm -rf {} +
+find . -name 'dist' -type d -exec rm -rf {} +
+find . -name 'bin' -type d -exec rm -rf {} +
+find . -name 'build' -type d -exec rm -rf {} +
+find . -name 'node_modules' -type d -exec rm -rf {} +
+find . -name 'catalog-info.yaml' -type f -delete
+find . -name 'frontseat.yaml' -type f -delete
+"""
+
+# Settings
+# =============================================================================
+[settings]
+experimental = true
+jobs = 12
