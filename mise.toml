@@ -2,8 +2,7 @@
 frontseat = "https://github.com/frontseat-dev/frontseat-mise.git"
 
 [tools]
-# Managed by frontseat - frontseat CLI self-install
-"frontseat:frontseat" = { version = "latest", plugins = "asyncapi,backstage,deno,docker,dotnet,github,go,helm,jib,maven,mise,npm,openapi,protobuf,release-conventional-commits,release-flow,rust,vite" }
+"frontseat:frontseat" = { version = "latest", plugins = "asyncapi,deno,docker,dotnet,go,helm,maven,npm,openapi,protobuf,rust" }
 
 [settings]
 experimental= true

@@ -1,0 +1,21 @@
+apiVersion: frontseat.io/v1alpha1
+kind: Workspace
+metadata:
+  name: frontseat-demo
+spec:
+  ai:
+    options:
+      host: http://localhost:11434
+    provider: ollama
+  plugins:
+    frontseat/asyncapi: {}
+    frontseat/deno: {}
+    frontseat/docker: {}
+    frontseat/dotnet: {}
+    frontseat/go: {}
+    frontseat/helm: {}
+    frontseat/maven: {}
+    frontseat/npm: {}
+    frontseat/openapi: {}
+    frontseat/protobuf: {}
+    frontseat/rust: {}
