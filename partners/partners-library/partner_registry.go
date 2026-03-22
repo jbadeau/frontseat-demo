@@ -11,4 +11,3 @@ func Version() string {
 
 func VerifyPartner(name string, tier string) string {
 	return gothamgocommons.RegisterPartner(name, tier)
-}

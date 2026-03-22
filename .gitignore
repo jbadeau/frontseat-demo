@@ -36,3 +36,13 @@ dist/
 .frontseat/
 ship
 .frontseat
+
+tmp/
+build/
+
+.moon/
+.turbo/
+.nx/
+buck-out/
+.gradle/
+.pants.d/

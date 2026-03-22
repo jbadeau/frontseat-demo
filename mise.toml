@@ -11,3 +11,33 @@ experimental= true
 [tasks.nuke]
 description = "Remove all generated files and directories"
 run = "rm -rf .m2/ .frontseat/ ship/ target/ catalog-info.yaml frontseat.yaml"
+
+# --- Monorepo build tool comparison tasks ---
+
+[tasks.turbo]
+description = "Build with Turborepo (JS packages)"
+run = "npx turbo build --force"
+
+[tasks.nx]
+description = "Build with Nx (JS packages)"
+run = "npx nx run-many -t build --skip-nx-cache"
+
+[tasks.moon]
+description = "Build with Moonrepo (JS packages)"
+run = "moon run :build --force"
+
+[tasks.pants]
+description = "Build with Pants (Go packages)"
+run = "pants count-loc platform/gotham-go-platform/gotham-go-commons:: partners/partners-library:: partners/partners-service::"
+
+[tasks.buck2]
+description = "Build with Buck2 (Rust packages)"
+run = "buck2 build //..."
+
+[tasks.bazel]
+description = "Build with Bazel (Go packages)"
+run = "bazelisk clean && bazelisk build //..."
+
+[tasks.gradle]
+description = "Build with Gradle (Java packages)"
+run = "gradle assemble --no-build-cache"

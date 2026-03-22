@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@gotham-financial/portal-library": "file:../portal-library"
+    "@gotham-financial/portal-library": "*"
   },
   "devDependencies": {
     "vite": "^5.0.0"
