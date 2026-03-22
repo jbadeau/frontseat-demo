@@ -1,0 +1,14 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "gotham-go-commons",
+    srcs = ["gotham_service.go"],
+    importpath = "github.com/gotham-financial/gotham-go-commons",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "gotham-go-commons_test",
+    srcs = ["gotham_service_test.go"],
+    embed = [":gotham-go-commons"],
+)

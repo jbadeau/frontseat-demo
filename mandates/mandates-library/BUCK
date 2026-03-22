@@ -1,0 +1,6 @@
+export_file(
+    name = "mandates-library",
+    src = "src/lib.rs",
+    visibility = ["PUBLIC"],
+    default_target_platform = "root//platforms:default",
+)

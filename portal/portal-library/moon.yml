@@ -1,0 +1,14 @@
+language: javascript
+
+dependsOn:
+  - gotham-vite-commons
+
+tasks:
+  build:
+    command: 'npm run build'
+    deps:
+      - 'gotham-vite-commons:build'
+    inputs:
+      - 'src/**/*'
+    outputs:
+      - 'dist/**/*'

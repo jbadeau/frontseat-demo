@@ -1,0 +1,12 @@
+load("@rules_go//go:def.bzl", "go_binary")
+
+go_binary(
+    name = "partners-service",
+    srcs = ["main.go"],
+    importpath = "github.com/gotham-financial/partners-service",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//partners/partners-library",
+        "//platform/gotham-go-platform/gotham-go-commons",
+    ],
+)

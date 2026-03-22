@@ -1,0 +1,15 @@
+language: javascript
+
+dependsOn:
+  - portal-library
+
+tasks:
+  build:
+    command: 'npm run build'
+    deps:
+      - 'portal-library:build'
+    inputs:
+      - 'src/**/*'
+      - 'index.html'
+    outputs:
+      - 'dist/**/*'

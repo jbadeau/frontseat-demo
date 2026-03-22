@@ -1,0 +1,17 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "partners-library",
+    srcs = ["partner_registry.go"],
+    importpath = "github.com/gotham-financial/partners-library",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//platform/gotham-go-platform/gotham-go-commons",
+    ],
+)
+
+go_test(
+    name = "partners-library_test",
+    srcs = ["partner_registry_test.go"],
+    embed = [":partners-library"],
+)

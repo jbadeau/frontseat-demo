@@ -1,0 +1,21 @@
+[GLOBAL]
+pants_version = "2.31.0"
+backend_packages = [
+    "pants.backend.experimental.go",
+]
+pants_ignore = [
+    "common/",
+    "node_modules/",
+    ".moon/",
+    ".nx/",
+    "toolchains/",
+    "platforms/",
+    "**/BUILD.bazel",
+    "bazel-*",
+]
+
+[source]
+root_patterns = ["/"]
+
+[golang]
+minimum_expected_version = "1.21"
