@@ -3,6 +3,7 @@ kind: Workspace
 metadata:
   name: gotham-financial
 spec:
+  version: latest
   plugins:
     frontseat/asyncapi: {}
     frontseat/backstage: {}
@@ -12,7 +13,7 @@ spec:
     frontseat/github: {}
     frontseat/go: {}
     frontseat/helm: {}
-    frontseat/jib: {}
+    frontseat/gib: {}
     frontseat/maven: {}
     frontseat/mise: {}
     frontseat/npm: {}
@@ -22,4 +23,3 @@ spec:
     frontseat/release-flow: {}
     frontseat/rust: {}
     frontseat/vite: {}
-  version: latest
