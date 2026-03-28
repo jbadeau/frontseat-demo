@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cartservice
+  description: Shopping cart backed by Redis
+  labels:
+    frontseat.dev/language: csharp
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: boutique
+  providesApis:
+    - api:default/boutique-proto
+  dependencyOf:
+    - component:default/checkoutservice
+    - component:default/frontend

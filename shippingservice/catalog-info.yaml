@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: shippingservice
+  description: Provides shipping cost estimates and tracking
+  labels:
+    frontseat.dev/language: go
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: boutique
+  providesApis:
+    - api:default/boutique-proto
+  dependsOn:
+    - api:default/boutique-proto
+    - api:default/protos
+  dependencyOf:
+    - component:default/checkoutservice
+    - component:default/frontend

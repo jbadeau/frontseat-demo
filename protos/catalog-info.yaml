@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: boutique-proto
+  description: Online Boutique gRPC service definitions
+  labels:
+    frontseat.dev/language: protobuf
+spec:
+  type: grpc
+  lifecycle: production
+  owner: platform-team
+  system: boutique
+  definition: |
+    $text: ./demo.proto
+  dependencyOf:
+    - component:default/checkoutservice
+    - component:default/frontend
+    - component:default/productcatalogservice
+    - component:default/shippingservice

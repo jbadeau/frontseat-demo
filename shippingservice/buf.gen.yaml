@@ -1,0 +1,14 @@
+version: v2
+
+inputs:
+  - directory: ../protos
+
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    out: genproto
+    opt:
+      - module=github.com/GoogleCloudPlatform/microservices-demo/src/shippingservice/genproto
+  - remote: buf.build/grpc/go
+    out: genproto
+    opt:
+      - module=github.com/GoogleCloudPlatform/microservices-demo/src/shippingservice/genproto

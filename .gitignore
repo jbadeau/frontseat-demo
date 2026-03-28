@@ -1,38 +1,12 @@
-# Build outputs
-bin/
-obj/
-target/
-**/publish/
-*.class
-
-# Dependencies
-node_modules/
-deno.lock
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-*.tar
-
-.flattened-pom.xml
-
-# Go binaries (built in service root directories)
-services/go-service/bin/
-services/**/bin/*-service
-mise.local.toml
-/.m2/
-dist/
-
+.venv/
+.cache/
+.m2/
 .frontseat/
-ship
-.frontseat
+node_modules/
+target/
+build/
+dist/
+bin/
+ship/
+*.pyc
+__pycache__/

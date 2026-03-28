@@ -1,6 +1,0 @@
-apiVersion: v2
-name: payments-service
-description: A Helm chart for the Gotham Financial payments service
-type: application
-version: 0.0.0
-appVersion: "0.0.0"

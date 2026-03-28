@@ -1,8 +1,0 @@
-[package]
-name = "mandates-library"
-version = "0.0.0"
-edition = "2021"
-rust-version = "1.85"
-
-[dependencies]
-gotham-rust-commons = { path = "../../platform/gotham-rust-platform/gotham-rust-commons" }

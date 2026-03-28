@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: frontend
+  description: Web frontend for Online Boutique
+  labels:
+    frontseat.dev/language: go
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: boutique
+  consumesApis:
+    - api:default/boutique-proto
+  dependsOn:
+    - api:default/boutique-proto
+    - api:default/protos
+    - component:default/adservice
+    - component:default/cartservice
+    - component:default/checkoutservice
+    - component:default/currencyservice
+    - component:default/productcatalogservice
+    - component:default/recommendationservice
+    - component:default/shippingservice
+  dependencyOf:
+    - component:default/loadgenerator

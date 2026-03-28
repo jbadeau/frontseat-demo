@@ -1,7 +1,0 @@
-[package]
-name = "gotham-rust-commons"
-version = "0.0.0"
-edition = "2021"
-rust-version = "1.85"
-
-[dependencies]

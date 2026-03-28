@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: emailservice
+  description: Sends order confirmation emails
+  labels:
+    frontseat.dev/language: python
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: boutique
+  providesApis:
+    - api:default/boutique-proto
+  dependencyOf:
+    - component:default/checkoutservice

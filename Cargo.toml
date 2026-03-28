@@ -1,7 +1,0 @@
-[workspace]
-members = [
-    "platform/gotham-rust-platform/gotham-rust-commons",
-    "mandates/mandates-library",
-    "mandates/mandates-service",
-]
-resolver = "2"

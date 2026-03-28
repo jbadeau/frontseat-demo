@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: currencyservice
+  description: Currency conversion using ECB exchange rates
+  labels:
+    frontseat.dev/language: javascript
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: boutique
+  providesApis:
+    - api:default/boutique-proto
+  dependencyOf:
+    - component:default/checkoutservice
+    - component:default/frontend

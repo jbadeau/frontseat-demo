@@ -1,25 +1,18 @@
 apiVersion: frontseat.io/v1alpha1
 kind: Workspace
 metadata:
-  name: gotham-financial
+  name: online-boutique
 spec:
   version: latest
   plugins:
-    frontseat/asyncapi: {}
     frontseat/backstage: {}
-    frontseat/deno: {}
     frontseat/docker: {}
     frontseat/dotnet: {}
-    frontseat/github: {}
-    frontseat/go: {}
-    frontseat/helm: {}
     frontseat/gib: {}
+    frontseat/go: {}
     frontseat/maven: {}
     frontseat/mise: {}
     frontseat/npm: {}
-    frontseat/openapi: {}
     frontseat/protobuf: {}
-    frontseat/release-conventional-commits: {}
-    frontseat/release-flow: {}
-    frontseat/rust: {}
-    frontseat/vite: {}
+    frontseat/python: {}
+    frontseat/spectral: {}
