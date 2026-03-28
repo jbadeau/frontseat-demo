@@ -1,0 +1,16 @@
+apiVersion: jib/v1alpha1
+kind: BuildFile
+from:
+  image: node:22-alpine
+workingDirectory: /app
+layers:
+  entries:
+    - name: app
+      files:
+        - src: ${ARTIFACT}
+          dest: /app/
+entrypoint:
+  - node
+  - dist/index.js
+exposedPorts:
+  - "3000"

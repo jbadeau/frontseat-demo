@@ -1,7 +1,9 @@
 FROM alpine:3.19
 
 WORKDIR /app
-COPY bin/linux-amd64/partners-service .
+
+ARG ARTIFACT
+COPY ${ARTIFACT} partners-service
 
 EXPOSE 8080
 
