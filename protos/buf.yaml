@@ -3,4 +3,4 @@ modules:
   - path: .
 lint:
   use:
-    - STANDARD
+    - MINIMAL

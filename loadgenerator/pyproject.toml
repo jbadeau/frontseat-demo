@@ -6,3 +6,6 @@ dependencies = [
     "locust>=2.43.0",
     "faker>=40.1.0",
 ]
+
+[tool.ruff.lint]
+ignore = ["E741"]

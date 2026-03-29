@@ -3,7 +3,14 @@ frontseat = "https://github.com/frontseat-dev/frontseat-mise.git"
 
 [tools]
 # Managed by frontseat - frontseat CLI self-install
-"frontseat:frontseat" = { version = "latest", plugins = "backstage,docker,dotnet,gib,go,maven,mise,npm,protobuf,python,spectral" }
+buf = "latest"
+dotnet = "latest"
+"frontseat:frontseat" = { version = "latest", plugins = "backstage,docker,dotnet,gib,go,maven,mise,npm,protobuf,ruff,spectral,uv" }
+go = "1.26.1"
+java = "21"
+maven = "latest"
+node = "22"
+python = "3.12"
 
 [settings]
 experimental = true

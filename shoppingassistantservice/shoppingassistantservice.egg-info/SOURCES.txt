@@ -1,0 +1,7 @@
+pyproject.toml
+shoppingassistantservice.py
+shoppingassistantservice.egg-info/PKG-INFO
+shoppingassistantservice.egg-info/SOURCES.txt
+shoppingassistantservice.egg-info/dependency_links.txt
+shoppingassistantservice.egg-info/requires.txt
+shoppingassistantservice.egg-info/top_level.txt

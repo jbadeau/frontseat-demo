@@ -4,11 +4,11 @@ inputs:
   - directory: ../protos
 
 plugins:
-  - remote: buf.build/protocolbuffers/go
+  - local: protoc-gen-go
     out: genproto
     opt:
-      - module=github.com/GoogleCloudPlatform/microservices-demo/src/frontend/genproto
-  - remote: buf.build/grpc/go
+      - module=github.com/GoogleCloudPlatform/microservices-demo/hipstershop
+  - local: protoc-gen-go-grpc
     out: genproto
     opt:
-      - module=github.com/GoogleCloudPlatform/microservices-demo/src/frontend/genproto
+      - module=github.com/GoogleCloudPlatform/microservices-demo/hipstershop

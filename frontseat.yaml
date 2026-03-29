@@ -14,5 +14,6 @@ spec:
     frontseat/mise: {}
     frontseat/npm: {}
     frontseat/protobuf: {}
-    frontseat/python: {}
+    frontseat/ruff: {}
     frontseat/spectral: {}
+    frontseat/uv: {}

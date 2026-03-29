@@ -42,7 +42,7 @@ func CreateQuoteFromCount(count int) Quote {
 func CreateQuoteFromFloat(value float64) Quote {
 	units, fraction := math.Modf(value)
 	return Quote{
-		uint32(units),
-		uint32(math.Trunc(fraction * 100)),
+		Dollars: uint32(units),
+		Cents:   uint32(math.Trunc(fraction * 100)),
 	}
 }

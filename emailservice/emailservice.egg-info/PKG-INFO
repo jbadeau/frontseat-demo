@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: emailservice
+Version: 0.0.0
+Requires-Python: >=3.12
+Requires-Dist: google-api-core>=2.28.1
+Requires-Dist: grpcio-health-checking>=1.76.0
+Requires-Dist: grpcio>=1.76.0
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: python-json-logger>=4.0.0
+Requires-Dist: google-cloud-trace>=1.17.0
+Requires-Dist: requests>=2.32.5
+Requires-Dist: opentelemetry-distro>=0.60b1
+Requires-Dist: opentelemetry-instrumentation-grpc>=0.60b1
+Requires-Dist: opentelemetry-exporter-otlp-proto-grpc>=1.39.1

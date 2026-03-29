@@ -12,3 +12,9 @@ dependencies = [
     "opentelemetry-instrumentation-grpc>=0.60b1",
     "opentelemetry-exporter-otlp-proto-grpc>=1.39.1",
 ]
+
+[tool.setuptools]
+py-modules = ["recommendation_server", "client", "logger", "demo_pb2", "demo_pb2_grpc"]
+
+[tool.ruff]
+exclude = ["*_pb2.py", "*_pb2_grpc.py"]

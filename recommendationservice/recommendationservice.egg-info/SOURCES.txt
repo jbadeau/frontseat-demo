@@ -1,0 +1,11 @@
+client.py
+demo_pb2.py
+demo_pb2_grpc.py
+logger.py
+pyproject.toml
+recommendation_server.py
+recommendationservice.egg-info/PKG-INFO
+recommendationservice.egg-info/SOURCES.txt
+recommendationservice.egg-info/dependency_links.txt
+recommendationservice.egg-info/requires.txt
+recommendationservice.egg-info/top_level.txt
