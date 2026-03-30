@@ -3,7 +3,6 @@ kind: Workspace
 metadata:
   name: online-boutique
 spec:
-  version: latest
   plugins:
     frontseat/backstage: {}
     frontseat/docker: {}
@@ -12,8 +11,10 @@ spec:
     frontseat/go: {}
     frontseat/maven: {}
     frontseat/mise: {}
+    frontseat/node: {}
     frontseat/npm: {}
     frontseat/protobuf: {}
     frontseat/ruff: {}
     frontseat/spectral: {}
     frontseat/uv: {}
+  version: latest
