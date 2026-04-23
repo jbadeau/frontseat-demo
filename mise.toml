@@ -2,10 +2,7 @@
 frontseat = "https://github.com/frontseat-dev/frontseat-mise.git"
 
 [tools]
-# Managed by frontseat - frontseat CLI self-install
-buf = "latest"
-dotnet = "latest"
-"frontseat:frontseat" = { version = "latest", plugins = "backstage,docker,dotnet,gib,go,maven,mise,npm,protobuf,ruff,spectral,uv" }
+"frontseat:frontseat" = { version = "latest", plugins = "backstage,backstage,docker,dotnet,github,github,go,maven,node,release-conventional-commits,release-conventional-commits,release-flow,release-flow,release-manual" }
 
 [settings]
 experimental = true

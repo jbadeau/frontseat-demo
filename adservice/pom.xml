@@ -13,6 +13,14 @@
     <name>Ad Service</name>
     <description>Serves contextual advertisements for Online Boutique</description>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/jbadeau/frontseat-demo</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <revision>0.0.0</revision>
         <maven.compiler.source>21</maven.compiler.source>

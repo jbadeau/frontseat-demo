@@ -1,20 +1,29 @@
 apiVersion: frontseat.io/v1alpha1
 kind: Workspace
 metadata:
-  name: online-boutique
+  name: frontseat-demo
 spec:
+  ai:
+    options:
+      host: http://localhost:11434
+    provider: ollama
+  branching:
+    strategy: release-flow
+  platform:
+    targets:
+      - linux/amd64
+      - darwin/arm64
+      - windows/amd64
   plugins:
     frontseat/backstage: {}
     frontseat/docker: {}
     frontseat/dotnet: {}
-    frontseat/gib: {}
+    frontseat/github: {}
     frontseat/go: {}
     frontseat/maven: {}
-    frontseat/mise: {}
     frontseat/node: {}
-    frontseat/npm: {}
-    frontseat/protobuf: {}
-    frontseat/ruff: {}
-    frontseat/spectral: {}
-    frontseat/uv: {}
-  version: latest
+    frontseat/release-conventional-commits: {}
+    frontseat/release-flow: {}
+    frontseat/release-manual: {}
+  ship:
+    strategy: conventional-commits
