@@ -21,9 +21,13 @@ spec:
     frontseat/github: {}
     frontseat/go: {}
     frontseat/maven: {}
+    frontseat/mise: {}
     frontseat/node: {}
     frontseat/release-conventional-commits: {}
     frontseat/release-flow: {}
     frontseat/release-manual: {}
   ship:
     strategy: conventional-commits
+  tools:
+    manager:
+      type: mise
