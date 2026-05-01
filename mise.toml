@@ -2,7 +2,7 @@
 frontseat = "https://github.com/frontseat-dev/frontseat-mise.git"
 
 [tools]
-"frontseat:frontseat" = { version = "latest", plugins = "backstage,backstage,docker,dotnet,github,github,go,maven,mise,mise,node,release-conventional-commits,release-conventional-commits,release-flow,release-flow,release-manual" }
+"frontseat:frontseat" = { version = "latest", plugins = "backstage,backstage,docker,dotnet,github,github,go,maven,mise,mise,node,release-conventional-commits,release-conventional-commits,release-flow,release-flow" }
 
 [settings]
 experimental = true
