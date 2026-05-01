@@ -10,3 +10,5 @@ bin/
 ship/
 *.pyc
 __pycache__/
+obj/
+.nx/

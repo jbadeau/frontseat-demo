@@ -28,6 +28,11 @@ spec:
     frontseat/release-manual: {}
   ship:
     strategy: conventional-commits
+  runner:
+    type: reapi
+    options:
+      address: "localhost:50051"
+      logstreamAddress: "localhost:50052"
   tools:
     manager:
       type: mise

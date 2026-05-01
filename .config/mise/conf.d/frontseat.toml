@@ -1,7 +1,7 @@
 [tools]
 # Managed by frontseat — do not edit. Synced from project manifests.
 dotnet = "latest"
-go = ["1.25.0", "1.26.1"]
+go = "1.26.1"
 java = "zulu-21"
 maven = "latest"
 node = "22"
