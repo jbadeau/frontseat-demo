@@ -3,21 +3,19 @@ kind: Workspace
 metadata:
   name: frontseat-demo
 spec:
+  ai:
+    options:
+      host: http://localhost:11434
+    provider: ollama
   assistant:
     address: http://localhost:11434
     provider: ollama
-  assistants:
-    default: ollama
-    providers:
-      ollama:
-        address: http://localhost:11434
   branching:
     strategy: release-flow
   platform:
     targets:
       - linux/amd64
-      - darwin/arm64
-      - windows/amd64
+      - darwin/amd64
   plugins:
     frontseat/backstage: {}
     frontseat/docker: {}
@@ -34,12 +32,11 @@ spec:
     logStreamAddress: localhost:50052
     provider: buildgrid
   ship:
-    branching:
-      strategy: release-flow
-    versioning:
-      strategy: conventional-commits
+    strategy: conventional-commits
   targets:
-    - linux/arm64
-    - darwin/amd64
+    - linux/amd64
+    - darwin/arm64
+    - windows/amd64
   tools:
-    provider: mise
+    manager:
+      type: mise
