@@ -32,11 +32,13 @@ spec:
     logStreamAddress: localhost:50052
     provider: buildgrid
   ship:
-    strategy: conventional-commits
+    branching:
+      strategy: release-flow
+    versioning:
+      strategy: conventional-commits
   targets:
     - linux/amd64
     - darwin/arm64
     - windows/amd64
   tools:
-    manager:
-      type: mise
+    provider: mise
