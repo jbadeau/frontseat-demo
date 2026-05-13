@@ -17,5 +17,4 @@ spec:
   dependencyOf:
     - component:default/checkoutservice
     - component:default/frontend
-    - component:default/productcatalogservice
     - component:default/shippingservice
