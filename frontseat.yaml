@@ -9,6 +9,7 @@ spec:
     provider: ollama
   assistant:
     address: http://localhost:11434
+    model: qwen3:8b
     provider: ollama
   branching:
     strategy: release-flow
