@@ -3,6 +3,8 @@ kind: API
 metadata:
   name: boutique-proto
   description: Online Boutique gRPC service definitions
+  annotations:
+    frontseat.dev/plugins: "protobuf"
   labels:
     frontseat.dev/language: protobuf
 spec:

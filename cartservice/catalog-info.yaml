@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: cartservice
   description: Shopping cart backed by Redis
+  annotations:
+    frontseat.dev/plugins: "dotnet, docker"
   labels:
     frontseat.dev/language: csharp
 spec:

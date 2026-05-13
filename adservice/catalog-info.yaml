@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: adservice
   description: Serves contextual advertisements
+  annotations:
+    frontseat.dev/plugins: "maven, gib"
   labels:
     frontseat.dev/language: java
 spec:

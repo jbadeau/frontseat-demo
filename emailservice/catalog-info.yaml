@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: emailservice
   description: Sends order confirmation emails
+  annotations:
+    frontseat.dev/plugins: "uv, docker"
   labels:
     frontseat.dev/language: python
 spec:

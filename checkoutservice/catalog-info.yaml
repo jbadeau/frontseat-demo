@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: checkoutservice
   description: Handles checkout and orchestrates payment, shipping, and email
+  annotations:
+    frontseat.dev/plugins: "go, docker"
   labels:
     frontseat.dev/language: go
 spec:

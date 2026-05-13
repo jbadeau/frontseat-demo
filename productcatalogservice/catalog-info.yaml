@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: productcatalogservice
   description: Provides product listing and search
+  annotations:
+    frontseat.dev/plugins: "go, docker"
   labels:
     frontseat.dev/language: go
 spec:
