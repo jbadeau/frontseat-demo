@@ -12,10 +12,6 @@ spec:
   lifecycle: production
   owner: platform-team
   system: boutique
-  ship:
-    strategy: conventional-commits
-  branching:
-    strategy: release-flow
   consumesApis:
     - api:default/boutique-proto
   dependsOn:
