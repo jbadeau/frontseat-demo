@@ -18,3 +18,5 @@ spec:
     - component:default/productcatalogservice
   dependencyOf:
     - component:default/frontend
+  projects:
+    - recommendationservice

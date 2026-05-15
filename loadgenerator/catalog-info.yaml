@@ -14,3 +14,5 @@ spec:
   system: boutique
   dependsOn:
     - component:default/frontend
+  projects:
+    - loadgenerator

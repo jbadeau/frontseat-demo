@@ -16,3 +16,5 @@ spec:
     - api:default/boutique-proto
   dependencyOf:
     - component:default/checkoutservice
+  projects:
+    - paymentservice

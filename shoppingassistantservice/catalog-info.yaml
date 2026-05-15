@@ -14,3 +14,5 @@ spec:
   system: boutique
   dependsOn:
     - component:default/productcatalogservice
+  projects:
+    - shoppingassistantservice

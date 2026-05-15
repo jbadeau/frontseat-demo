@@ -26,3 +26,5 @@ spec:
     - component:default/shippingservice
   dependencyOf:
     - component:default/loadgenerator
+  projects:
+    - frontend

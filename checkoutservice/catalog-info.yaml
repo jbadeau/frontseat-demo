@@ -25,3 +25,5 @@ spec:
     - component:default/shippingservice
   dependencyOf:
     - component:default/frontend
+  projects:
+    - checkoutservice

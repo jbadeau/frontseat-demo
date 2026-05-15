@@ -19,12 +19,6 @@ spec:
     strategy: conventional-commits
     versioning: fixed
     tagPattern: "v{version}"
----
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: boutique
-  description: Online Boutique e-commerce platform
-spec:
-  owner: platform-team
-  domain: online-boutique
+  projects:
+    - online-boutique
+    - productcatalogservice

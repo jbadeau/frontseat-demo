@@ -17,3 +17,7 @@ spec:
   dependencyOf:
     - component:default/checkoutservice
     - component:default/frontend
+  projects:
+    - cartservice
+    - cartservice
+    - cartservice.tests
