@@ -1,3 +1,0 @@
-# Managed by frontseat — darwin JAVA_HOME override. Add to .gitignore.
-[env]
-JAVA_HOME = { value = "{{ tools['java'].path }}/Contents/Home", tools = true }

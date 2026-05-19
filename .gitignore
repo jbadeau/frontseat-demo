@@ -1,13 +1,10 @@
 .venv/
 .cache/
-.m2/
-.frontseat/
 node_modules/
 target/
 build/
 dist/
 bin/
-ship/
 *.pyc
 __pycache__/
 obj/
